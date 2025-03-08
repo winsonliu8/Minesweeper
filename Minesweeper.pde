@@ -57,11 +57,6 @@ public boolean isWon()
 }
 public void displayLosingMessage()
 {
-  pushMatrix(); 
-  fill (255); 
-  textSize(25); 
-  text ("Game Over", 200, 200);
-  popMatrix();
   
   //displays all the mines
   for (int r = 0; r < buttons.length; r++) {
@@ -72,6 +67,11 @@ public void displayLosingMessage()
       }
     }
   }
+ pushMatrix(); 
+  fill (255); 
+  textSize(25); 
+  text ("Game Over", 200, 200);
+  popMatrix();
   System.out.println("Game Over");
 }
 public void displayWinningMessage()
